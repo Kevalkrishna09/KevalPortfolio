@@ -17,7 +17,9 @@
   <body class="   dark:bg-gray-400">
     <nav id="desktop-nav">
       <div class="logo">
-        <img src="./assets/narutoPng.png" alt="Protector Icon" class="protector-img">
+        <button onclick="narutoClicked()" style="cursor: pointer;">
+          <img src="./assets/narutoPng.png" alt="Protector Icon" class="protector-img">
+        </button>
         <p class="nameToggle"><span>Keval Krishna</span></p></span>
         <button class="playOST text-gray-500 hover:text-red-500 transition"></button>
       </div>
@@ -34,7 +36,9 @@
     
     <nav id="hamburger-nav">
       <div class="logo">
-        <img src="./assets/narutoPng.png" alt="Protector Icon" class="protector-img">
+        <button onclick="narutoClicked()" style="cursor: pointer;">
+          <img src="./assets/narutoPng.png" alt="Protector Icon" class="protector-img">
+        </button>
         <span class="nameToggle">Keval Krishna</span>
         <button class="playOST text-gray-500 hover:text-red-500 transition"></button>
       </div>
@@ -55,7 +59,7 @@
     </nav>
     
 
-    <section id="profile">
+    <section id="profile" class="shakable">
       <div class="background"></div>
       <div class="section__pic-container">
         <img
@@ -101,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section id="about">
+    <section id="about" class="shakable">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
@@ -131,7 +135,7 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree</p>
+              <p>B.Tech. Bachelors Degree</p>
               <p>BMS Institute Of Technology</p>
             </div>
           </div>
@@ -149,7 +153,7 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <section id="experience">
+    <section id="experience" class="shakable">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
@@ -251,7 +255,7 @@
         onclick="location.href='./#projects'"
       />
     </section>
-    <section id="projects">
+    <section id="projects" class="shakable">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
@@ -341,7 +345,7 @@
         onclick="location.href='./#contact'"
       />
     </section>
-    <section id="contact">
+    <section id="contact" class="shakable">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div

@@ -83,3 +83,47 @@ document.querySelectorAll(".nameToggle").forEach((nameElement) => {
     }
   });
 });
+
+narutoClicked=()=>{
+  console.log("clicked naruto image ")
+  const divs = document.querySelectorAll('.shakable');
+    divs.forEach(div => {
+      div.classList.add('shake');
+      
+      // After 1 second, remove the shake class to stop the shake effect
+      setTimeout(() => {
+        div.classList.remove('shake');
+      }, 7000);  
+    });
+  const numNarutos = Math.floor(Math.random() * (9 - 5 + 1)) + 5; // Generate a random number of Naruto (between 5 and 9)
+    
+  for (let i = 0; i < numNarutos; i++) {
+    createNarutoGif();
+  }
+}
+
+function createNarutoGif() {
+  const gif = document.createElement('img');
+  gif.classList.add('naruto-gif');
+  gif.src = './assets/narutoRunning.gif'; // Path to your Naruto running GIF
+  gif.alt = 'Naruto Running';
+    // Set a random vertical position using pixels instead of vh
+    const startY = Math.random() * window.innerHeight; // Random vertical position in pixels (0 to window height)
+    gif.style.top = `${startY}px`;  // Use px instead of vh for a fixed vertical position
+  
+    // Add animation delay to stagger their start times
+    const delay = Math.random() * 2;  // Random delay between 0 and 2 seconds
+    gif.style.animationDelay = `${delay}s`;  // Add delay to each Naruto's animation
+  
+    // Add a random horizontal offset to ensure Naruto starts at different positions
+    const horizontalOffset = Math.random() * 50; // Random horizontal offset between 0 and 50px
+    gif.style.left = `-${horizontalOffset + 300}px`; 
+    gif.style.position = 'fixed';
+    // Add GIF to the body
+    document.body.appendChild(gif);
+  
+    // Set a timeout to remove the GIF after 5 seconds, based on the delay of the gif
+    setTimeout(() => {
+      document.body.removeChild(gif);
+    }, 5000 + (delay * 1000)); 
+}

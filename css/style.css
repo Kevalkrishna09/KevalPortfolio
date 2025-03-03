@@ -500,3 +500,41 @@ footer p {
     transform: translateY(100vh) rotate(360deg);
   }
 }
+.naruto-gif {
+  position: absolute;
+  bottom: 0;
+  width: 300px;  /* Size of Naruto's running GIF */
+  height: 300px;
+  animation: run-animation 5s linear infinite; /* Animation for running effect */
+}
+
+@keyframes run-animation {
+  0% {
+    transform: translateX(-200px); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(100vw); /* End at the right at the same Y position */
+  }
+}
+
+    @keyframes shake {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      75% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .shake {
+      animation: shake 0.5s ease-in-out infinite; /* Shake duration and timing */
+    }
